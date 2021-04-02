@@ -46,19 +46,19 @@ I also wanted a MVP in case 6 classes were too difficult to distinguish for the 
 
 **Trucks**: vans, trucks, SUVs
 
-![2Class](./images/EZ_Type_Distribution.png)
+![2Class](images/EZ_Type_Distribution.png)
 
 ## Modeling
 
 Initial 2 Class Model:
 
-![2ClassSum]('images/480k281.JPG')
+![2ClassSum](images/480k281.JPG)
 
 81% Validation Accuracy
 
 Initial 6 Class Model:
 
-![6ClassSum]('images/3_7mil637.JPG')
+![6ClassSum](images/3_7mil637.JPG)
 
 37% Validation Accuracy
 
@@ -66,9 +66,9 @@ Final 2 Class Model:
 
 Increased complexity with more filters and dense layers.
 
-![2ClassSum]('images/1_4mil285.JPG')
+![2ClassSum](images/1_4mil285.JPG)
 
-![2ClassEpoch]('images/2_Classes_Val_over_epoch.png')
+![2ClassEpoch](images/2_Classes_Val_over_epoch.png)
 
 85% Validation Accuracy
 
@@ -76,9 +76,9 @@ Final 6 Class Model:
 
 Got rid of the dropout layer and decreased the complexity.
 
-![6ClassSum]('images/2mil651.JPG')
+![6ClassSum](images/2mil651.JPG)
 
-![6ClassEpoch]('images/6_Classes_Val_over_epoch.png')
+![6ClassEpoch](images/6_Classes_Val_over_epoch.png)
 
 51% Validation Accuracy
 
@@ -92,18 +92,18 @@ I spent over 2 days trying to figure out how to spin up a GPU instance on an EC2
 
 I initially had both models using the Sigmoid activation function for the final layer which presented a strange problem late into the project. I looked at the test prediction weights and they all fell on 1 or close to 1.
 
-![sig_soft]('images/sig_vs_softmax_output.jpg')
+![sig_soft](images/sig_vs_softmax_output.JPG)
 
 And yet the accuracy of sigmoid was quite high at 55% 
 
-![sig_soft_acc]('images/sig_vs_softmax_acc.jpg')
+![sig_soft_acc](images/sig_vs_softmax_acc.JPG)
 
 
 ## Results
 
 ### Cars that the model has never seen before!
 
-![demo]('images/Cars_demo.jpg')
+![demo](images/Cars_demo.png)
 
 
 ## Acknowledgements

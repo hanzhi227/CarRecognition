@@ -106,6 +106,9 @@ And yet the accuracy of sigmoid was quite high at 55%
 
 ![demo](images/Cars_demo.png)
 
+## Further Consideration
+
+In the future I would like to compare some different Neural Network types.
 
 ## Acknowledgements
 

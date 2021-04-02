@@ -50,6 +50,8 @@ I also wanted a MVP in case 6 classes were too difficult to distinguish for the 
 
 ## Modeling
 
+The first thing I did was downsample the resolution to 256x256 and grayscale all the images to reduce the training time.
+
 Initial 2 Class Model:
 
 ![2ClassSum](images/480k281.JPG)

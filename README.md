@@ -68,6 +68,8 @@ Increased complexity with more filters and dense layers.
 
 ![2ClassSum]('images/1_4mil285.JPG')
 
+![2ClassEpoch]('images/2_Classes_Val_over_epoch.png')
+
 85% Validation Accuracy
 
 Final 6 Class Model:
@@ -75,6 +77,8 @@ Final 6 Class Model:
 Got rid of the dropout layer and decreased the complexity.
 
 ![6ClassSum]('images/2mil651.JPG')
+
+![6ClassEpoch]('images/6_Classes_Val_over_epoch.png')
 
 51% Validation Accuracy
 

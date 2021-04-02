@@ -4,7 +4,7 @@
 
 -------
 
-![header](./images/header_car.gif)
+![header](./images/header.JPG)
 
 ## Mission
 

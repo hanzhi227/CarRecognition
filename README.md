@@ -108,7 +108,8 @@ And yet the accuracy of sigmoid was quite high at 55%
 
 ## Further Consideration
 
-In the future I would like to compare some different Neural Network types.
+With more time I would like to focus in on where the car is and keep the ratio of the cars. The squeezing and stretching of the images to reach a perfect square likely threw off the model and caused strange angles that did not belong on that class of cars.
+In the future I would also like to compare some different Neural Networks.
 
 ## Acknowledgements
 

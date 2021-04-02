@@ -8,8 +8,7 @@
 
 ## Mission
 
-Wouldn't it be amazing if my computer could recognize what a car's body type is just from an image of a car? That is exactly what I set out to do.
-
+Cars are the main type of transportation around the globe. Being able to recognize the type of car on the roads could produce some great data.
 This could be utilized to detect cars passing through traffic to collect data. Some useful metrics that could be derived:
 
 -Road Wear

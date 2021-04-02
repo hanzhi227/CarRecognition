@@ -83,7 +83,7 @@ Got rid of the dropout layer and decreased the complexity.
 
 51% Validation Accuracy
 
-## Struggles
+## Hurdles to hop
 
 ### AWS
 

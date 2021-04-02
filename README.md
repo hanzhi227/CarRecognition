@@ -1,4 +1,4 @@
 # Capstone2 - Machine Learning
 
-# Train My Computer to Recognize Car Types
+# Training My Computer to Recognize Car Types
 

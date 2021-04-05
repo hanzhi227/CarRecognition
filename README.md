@@ -3,8 +3,10 @@
 # Training My Computer to Distinguish Car Types
 
 -------
+<p align="center">
+  <img src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header_car.gif">
+</p>
 
-![header](./images/header_car.gif)
 
 ## Mission
 
@@ -21,13 +23,7 @@ This could be utilized to detect cars passing through traffic to collect data. S
 
 The dataset consists of 16,185 images of cars, of which only the 8,144 training images are labeled with car names. There are 196 unique cars within this dataset. The test set are not labeled with a description. 
 
-Input:
-
-Car Image
-
-Target that came with the dataset: 
-
-Car Description
+Peek at what the data looks like
 
 ![sample](./images/data_sample.png)
 
@@ -37,7 +33,9 @@ Car Description
 
 Upon looking at the dataset initially, I realized that 196 unique cars (196 targets) was too many targets to predict on. I worked on boiling down the 196 car names into more elementary categories. A good chunk of time was dedicated to parsing through the car names to determine which bin it would fall under. These are the 6 bins of cars I settled on along with the numbers observed of each.
 
-![6class](./images/Car_Type_Distribution.png)
+<p align="center">
+  <img src="https://github.com/hanzhi227/CarRecognition/blob/master/images/Car_Type_Distribution.png">
+</p>
 
 I also wanted a MVP in case 6 classes were too difficult to distinguish for the computer, thus I decided to combine/split the 6 classes into two classes:
 
@@ -45,7 +43,10 @@ I also wanted a MVP in case 6 classes were too difficult to distinguish for the 
 
 **Trucks**: vans, trucks, SUVs
 
-![2Class](images/EZ_Type_Distribution.png)
+<p align="center">
+  <img src="https://github.com/hanzhi227/CarRecognition/blob/master/images/EZ_Type_Distribution.png">
+</p>
+
 
 ## Modeling
 
@@ -53,13 +54,17 @@ The first thing I did was downsample the resolution to 256x256 and grayscale all
 
 Initial 2 Class Model:
 
-![2ClassSum](images/480k281.JPG)
+<p align="center">
+  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/480k281.JPG">
+</p>
 
 81% Validation Accuracy
 
 Initial 6 Class Model:
 
-![6ClassSum](images/3_7mil637.JPG)
+<p align="center">
+  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/3_7mil637.JPG">
+</p>
 
 37% Validation Accuracy
 
@@ -67,9 +72,14 @@ Final 2 Class Model:
 
 Increased complexity with more filters and dense layers.
 
-![2ClassSum](images/1_4mil285.JPG)
+<p align="center">
+  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/1_4mil285.JPG">
+</p>
 
-![2ClassEpoch](images/2_Classes_Val_over_epoch.png)
+<p align="center">
+  <img height="264" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/2_Classes_Val_over_epoch.png">
+</p>
+![2ClassEpoch](images/.png)
 
 85% Validation Accuracy
 
@@ -77,9 +87,13 @@ Final 6 Class Model:
 
 Got rid of the dropout layer and decreased the complexity.
 
-![6ClassSum](images/2mil651.JPG)
+<p align="center">
+  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/2mil651.JPG">
+</p>
 
-![6ClassEpoch](images/6_Classes_Val_over_epoch.png)
+<p align="center">
+  <img height="264" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/6_Classes_Val_over_epoch.png">
+</p>
 
 51% Validation Accuracy
 
@@ -93,11 +107,17 @@ I spent over 2 days trying to figure out how to spin up a GPU instance on an EC2
 
 I initially had both models using the Sigmoid activation function for the final layer which presented a strange problem late into the project. I looked at the test prediction weights and they all fell on 1 or close to 1.
 
-![sig_soft](images/sig_vs_softmax_output.JPG)
+<p align="center">
+  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/sig_vs_softmax_output.JPG">
+</p>
 
 And yet the accuracy of sigmoid was quite high at 55% 
 
-![sig_soft_acc](images/sig_vs_softmax_acc.JPG)
+<p align="center">
+  <img height="250" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/sig_vs_softmax_acc.JPG">
+</p>
+
+
 
 
 ## Results

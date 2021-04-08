@@ -25,7 +25,9 @@ The dataset consists of 16,185 images of cars, of which only the 8,144 training 
 
 Peek at what the data looks like
 
-![sample](./images/data_sample.png)
+<p align="center">
+  <img src="https://github.com/hanzhi227/CarRecognition/blob/master/images/data_sample.png">
+</p>
 
 ------
 
@@ -79,7 +81,6 @@ Increased complexity with more filters and dense layers.
 <p align="center">
   <img height="264" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/2_Classes_Val_over_epoch.png">
 </p>
-![2ClassEpoch](images/.png)
 
 85% Validation Accuracy
 

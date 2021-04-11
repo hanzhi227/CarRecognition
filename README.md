@@ -4,7 +4,7 @@
 
 -------
 <p align="center">
-  <img src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header_car.gif">
+  <img width="600" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header_car.gif">
 </p>
 
 
@@ -86,10 +86,10 @@ Increased complexity with more filters and dense layers.
 
 Final 6 Class Model:
 
-Got rid of the dropout layer and decreased the complexity.
+After experimenting with different layers and parameters, I found that omitting Dropout and reducing trainable parameters yielded the best results thus far.
 
 <p align="center">
-  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/2mil651.JPG">
+  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/2_87mil651.JPG">
 </p>
 
 <p align="center">

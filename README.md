@@ -54,7 +54,9 @@ I also wanted a MVP in case 6 classes were too difficult to distinguish for the 
 
 The first thing I did was downsample the resolution to 256x256 and grayscale all the images to reduce the training time.
 
-Custom 2 Class Model: 81% Validation Accuracy
+### Custom 2 Class Model: 
+
+81% Validation Accuracy
 
 <p align="center">
   <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/480k281.JPG">
@@ -62,14 +64,18 @@ Custom 2 Class Model: 81% Validation Accuracy
 
 
 
-Custom 6 Class Model: 37% Validation Accuracy
+### Custom 6 Class Model: 
+
+37% Validation Accuracy
 
 <p align="center">
   <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/3_7mil637.JPG">
 </p>
 
 
-Final 2 Class Model: 85% Validation Accuracy
+### Final 2 Class Model: 
+
+85% Validation Accuracy
 
 Increased complexity with more filters and dense layers.
 
@@ -82,7 +88,9 @@ Increased complexity with more filters and dense layers.
 </p>
 
 
-Final 6 Class Model: 51% Validation Accuracy
+### Final 6 Class Model: 
+
+51% Validation Accuracy
 
 After experimenting with different layers and parameters, I found that omitting Dropout and reducing trainable parameters yielded the best results thus far.
 

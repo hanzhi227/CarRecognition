@@ -75,7 +75,7 @@ The first thing I did was downsample the resolution to 256x256 and grayscale all
 
 ### Final 2 Class Model: 
 
-85% Validation Accuracy
+88.3% Validation Accuracy
 
 Increased complexity with more filters and dense layers.
 
@@ -90,7 +90,7 @@ Increased complexity with more filters and dense layers.
 
 ### Final 6 Class Model: 
 
-51% Validation Accuracy
+56% Validation Accuracy
 
 After experimenting with different layers and parameters, I found that omitting Dropout and reducing trainable parameters yielded the best results thus far.
 

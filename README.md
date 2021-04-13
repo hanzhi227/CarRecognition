@@ -3,8 +3,9 @@
 # Training My Computer to Distinguish Car Types
 
 -------
+
 <p align="center">
-  <img width="600" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header_car.gif">
+  <img width="600" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header.JPG">
 </p>
 
 
@@ -136,6 +137,10 @@ And yet the accuracy of sigmoid was quite high at 55%
 
 With more time I would like to focus in on where the car is and keep the ratio of the cars. The squeezing and stretching of the images to reach a perfect square likely threw off the model and caused strange angles that did not belong on that class of cars.
 In the future I would also like to compare some different Neural Networks.
+
+<p align="center">
+  <img width="600" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header_car.gif">
+</p>
 
 ## Acknowledgements
 

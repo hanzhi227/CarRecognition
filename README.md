@@ -84,7 +84,7 @@ ResNet50 yielded the best results on this particular dataset with a validation a
 ## Further Consideration
 
 With more time I would like to focus in on where the car is and keep the ratio of the cars. The squeezing and stretching of the images to reach a perfect square likely threw off the model and caused strange angles that did not belong on that class of cars.
-In the future I would like to train this on an object detection framework.
+Currently the model can reliably predict on images with clear images of cars in the middle of the screen, but I would love to have a model that can predict on videos. In the future I would like to train this on an object detection framework.
 
 <p align="center">
   <img width="600" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header_car.gif">

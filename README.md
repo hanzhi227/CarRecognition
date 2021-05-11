@@ -5,7 +5,7 @@
 -------
 
 <p align="center">
-  <img width="600" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header.JPG">
+  <img width="800" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header.JPG">
 </p>
 
 
@@ -15,9 +15,12 @@ Cars are the main type of transportation around the globe. Being able to recogni
 This could be utilized to detect cars passing through traffic to collect data. Some useful metrics that could be derived:
 
 -Road Wear
+
 -Improving data for business metrics
+
 -Making sure trucks are not in the left lane
 
+*Also it would be super awesome to see what the AI thinks of exotic/fictional/cartoon cars!*
 ## Dataset
 
 [Stanford Cars Dataset](https://www.kaggle.com/eduardo4jesus/stanford-cars-dataset)
@@ -53,79 +56,24 @@ I also wanted a MVP in case 6 classes were too difficult to distinguish for the 
 
 ## Modeling
 
-The first thing I did was downsample the resolution to 256x256 and grayscale all the images to reduce the training time.
+The first thing I did was downsample the resolution to 256x256 and grayscale all the images to reduce the training time. I tested many variations of layer combinations, batch norms, dropouts, and other parameters which improved my validation accuracy from random guessing to the final custom model validation accuracy scores you see below.
 
-### Custom 2 Class Model: 
+### Custom Model: 
 
-81% Validation Accuracy
+|2 Classes |6 Classes |
+|:------------------------:|:-------------------------:|
+| <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/1_4mil285.JPG"> | <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/2_87mil651.JPG"> |
+| <img height="264" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/2_Classes_Val_over_epoch.png"> | <img height="264" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/6_Classes_Val_over_epoch.png"> |
+| 88.3% Validation Accuracy | 56% Validation Accuracy |
 
-<p align="center">
-  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/480k281.JPG">
-</p>
 
-
-
-### Custom 6 Class Model: 
-
-37% Validation Accuracy
+### Model Comparison
 
 <p align="center">
-  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/3_7mil637.JPG">
+  <img width="800" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/transfer.png">
+  <img width="800" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/ResNet.png">
 </p>
-
-
-### Final 2 Class Model: 
-
-88.3% Validation Accuracy
-
-Increased complexity with more filters and dense layers.
-
-<p align="center">
-  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/1_4mil285.JPG">
-</p>
-
-<p align="center">
-  <img height="264" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/2_Classes_Val_over_epoch.png">
-</p>
-
-
-### Final 6 Class Model: 
-
-56% Validation Accuracy
-
-After experimenting with different layers and parameters, I found that omitting Dropout and reducing trainable parameters yielded the best results thus far.
-
-<p align="center">
-  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/2_87mil651.JPG">
-</p>
-
-<p align="center">
-  <img height="264" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/6_Classes_Val_over_epoch.png">
-</p>
-
-
-## Hurdles to hop
-
-### AWS
-
-I spent over 2 days trying to figure out how to spin up a GPU instance on an EC2 instance but the EC2 linux jupyter instance kept crashing upon importing tensorflow. This issue was not remedied so I pivoted to Google Colab to utilize a GPU to train my model.
-
-### Sigmoid
-
-I initially had both models using the Sigmoid activation function for the final layer which presented a strange problem late into the project. I looked at the test prediction weights and they all fell on 1 or close to 1.
-
-<p align="center">
-  <img height="300" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/sig_vs_softmax_output.JPG">
-</p>
-
-And yet the accuracy of sigmoid was quite high at 55% 
-
-<p align="center">
-  <img height="250" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/sig_vs_softmax_acc.JPG">
-</p>
-
-
-
+ResNet50 yielded the best results on this particular dataset with a validation accuracy of 95% and 79% on the 2 class and 6 class respectively, beating my custom CNN model by a fairly large margin. 
 
 ## Results
 
@@ -136,7 +84,7 @@ And yet the accuracy of sigmoid was quite high at 55%
 ## Further Consideration
 
 With more time I would like to focus in on where the car is and keep the ratio of the cars. The squeezing and stretching of the images to reach a perfect square likely threw off the model and caused strange angles that did not belong on that class of cars.
-In the future I would also like to compare some different Neural Networks.
+In the future I would like to train this on an object detection framework.
 
 <p align="center">
   <img width="600" src="https://github.com/hanzhi227/CarRecognition/blob/master/images/header_car.gif">
